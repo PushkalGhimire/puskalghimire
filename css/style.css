@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.bodyDark{
+    background: rgb(46, 45, 45);
+    color: white;
+
+}
+
+header nav .nav-links li .nav-link{
+    color: black;
+    text-decoration: none;
+  
+}
+
+header nav .nav-links li .nav-linkAct{
+    color: white;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+}
+header h1{
+    flex: 1;
+}
+header nav{
+    flex: 2;
+}
+
+header i{
+    font-size: 1.5rem;
+    flex: 1;
+    margin: 1rem;
+    text-align: right;
+    cursor: pointer;
+}
+header nav .nav-links{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+}
+
+header nav .nav-links li{
+    list-style: none;
+}
+
+header nav .nav-links li a::after{
+    content: ' ';
+    background-color: coral;
+    display: flex;
+    height: 3px;
+    width: 100%;
+    transform: scale(0,1);
+    transition: 0.3s;
+}
+header nav .nav-links li a:hover::after{
+    transform: scale(1,1);
+}
+
+
+main .name-data{
+    text-align: center;
+}
+main .img .pushkal{
+    height: 20%;
+	border-radius: 360px;
+    width: 25%;
+    min-width: 20rem;
+} 
+main .img{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social a .fab{
+    font-size: 1.8rem;
+    padding: 1rem;
+    color: black;
+    cursor: pointer;
+
+}
+
+
+.social a .socialDark{
+    color: white;
+
+}
+
+.social a .fa-facebook:hover{
+    font-size: 2.5rem;
+    color: rgb(102, 102, 235);
+}
+.social a .fa-instagram:hover{
+    font-size: 2.5rem;
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+.social a .fa-twitter:hover{
+    font-size: 2.5rem;
+    color: rgb(34, 178, 214);
+}
+
+.social a .fa-youtube:hover{
+    font-size: 2.5rem;
+    color: red;
+}
+
+/* navbar */
+.ham-burger div{
+    background-color: black;
+    height: 2px;
+    width: 30px;
+    margin: 3px;
+}
+.ham-burger .lineDark{
+    background-color: white;
+}
+
+.ham-burger{
+    display: none;
+    margin: 1rem;
+    z-index: 5;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:768px){
+    nav .nav-links{
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        left: -0.5%;
+        background-color: cornflowerblue;
+        line-height: 50px;
+        height: 100vh;
+        clip-path: circle(50% at 200% -100%);
+        transition: 0.5s;
+    }
+    nav .nav-linksActivate{
+        clip-path: circle(100% at 50% 50%);
+    }
+    header .fas{
+        text-align: left;
+        z-index: 1;
+        padding-right: 10px;
+    }
+    .ham-burger{
+        display: block;
+        align-items: right;
+        position: absolute;
+        right: 0;
+    }
+}
+
